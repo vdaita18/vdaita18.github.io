@@ -1,0 +1,101 @@
+<!--Venkata Daita Final Project Financial Planner Website Budgeting Page-->
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<link rel="stylesheet" href="css/finalstyles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special Elite">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nova Cut">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire Swash">
+	<title>Financial Planner</title> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div id="container">
+		<header> 
+			<a href="finalindex.html"><img class="logo" src="images/FinancialCompassLogoMod.PNG" alt="Financial Compass Logo" height="150" width="300"></a>
+		</header>
+		<nav>
+			<div class="navbar">
+				<a href="finalindex.html">Home</a>
+				<div class="subnav">
+					<button class="subnavbtn">Cards <i class="fa fa-caret-down"></i></button>
+				<div class="subnav-content">
+					<a href="creditdebit.html">Credit Cards</a>
+					<a href="creditdebit.html">Debit Cards</a>
+					<a href="creditdebit.html#resp">Responsible Use</a>
+				</div>
+				</div> 
+				
+				<div class="subnav">
+					<button class="subnavbtn">Budgeting <i class="fa fa-caret-down"></i></button>
+				<div class="subnav-content">
+					<a href="budgeting.html">How to Budget</a>
+					<a href="budgeting.html">Ideal Budget Tracker</a>
+				</div>
+				</div> 
+				
+				<div class="subnav">
+					<button class="subnavbtn">Bank Accounts <i class="fa fa-caret-down"></i></button>
+				<div class="subnav-content">
+					<a href="bankaccount.html">Checkings Account</a>
+					<a href="bankaccount.html#save">Savings Account</a>
+					<a href="bankaccount.html#roth">Roth IRA</a>
+				</div>
+				</div>
+				
+				<div class="subnav">
+					<button class="subnavbtn">Investing <i class="fa fa-caret-down"></i></button>
+				<div class="subnav-content">
+					<a href="investing.html#stocks">Stock Market</a>
+					<a href="investing.html#mutual">Mutual Funds</a>
+					<a href="investing.html#bond">Bonds</a>
+				</div>
+				</div> 
+			</div>
+		</nav>
+		
+		<main>
+			<!-- Box this in a white box with rounded corners and a shadow with a nice font-->
+			<div id="budget">
+			<h1>What is a budget?</h1>
+			<p>A budget is a detailed plan of costs and streams of revenue typically designed for a monthly plan. It is a critical aspect of your financial plan and allows you to make sure that you are not straying away from your monthly limit. This will be the centerpiece of your finances, going hand in hand with your credit/debit card plan, your monthly income, and your bank accounts. They will all merge into your budget, keeping you free of worry of how to handle your money.
+			</div>
+			
+			<h2>Ideal Budget!</h2>
+			<div id="piechart"></div>
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+
+				function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+				['Budget', 'Percentage per Month'],
+				['Housing', 30],
+				['Transportation', 15],
+				['Emergency Savings', 5],
+				['Food', 10],
+				['Student Loans', 10],
+				['Retirement', 10],
+				['Credit Cards', 5],
+				['Health Insurance', 7],
+				['Miscellaneous', 8]
+				]);
+				
+				var options = {'title':'Monthly Ideal Budget', 'width':550, 'height':400};
+				var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+				chart.draw(data, options);
+				}
+			</script>
+			
+			<p>This ideal budget is specifically designed for college students, both undergrads and grads. More information regarding other types of people will arrive soon... </p>
+		</main>
+	<footer>
+		<a href="budgeting.html">Top</a> &nbsp; Contact us at 412-245-FICO <br>
+		&copy; Copyright 2020. All Rights Reserved. <br>
+	</footer>
+	</div>
+</body>
+
